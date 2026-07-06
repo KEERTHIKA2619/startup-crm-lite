@@ -1,0 +1,1 @@
+var e=[`New`,`Contacted`,`Meeting Scheduled`,`Proposal Sent`,`Won`,`Lost`],t=[`Website`,`Referral`,`LinkedIn`,`Cold Call`,`Email Campaign`,`Other`],n=[`All`,...e],r={New:`#94A3B8`,Contacted:`#2563EB`,Meeting:`#F59E0B`,Proposal:`#7C3AED`,Won:`#22C55E`,Lost:`#EF4444`,"Meeting Scheduled":`#F59E0B`,"Proposal Sent":`#7C3AED`};export{e as i,t as n,r,n as t};
