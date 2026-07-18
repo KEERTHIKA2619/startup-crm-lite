@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Startup CRM Lite — manage your leads, track your pipeline, and close deals faster." />
+    <title>Pulse CRM — Startup CRM Lite</title>
+
+    <!--
+      Anti-FOUC dark mode script.
+      Runs synchronously BEFORE React renders so the very first paint
+      already uses the user's saved theme preference.
+    -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('startup-crm-theme');
+          if (stored !== null && JSON.parse(stored) === true) {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {
+          // localStorage unavailable (private mode / SSR) — default to light
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

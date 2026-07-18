@@ -1,0 +1,139 @@
+﻿
+C:\Users\harsh\Downloads\startup-crm-lite\src\components\common\DarkModeToggle.jsx
+  16:8  error  'React' is defined but never used  no-unused-vars
+
+C:\Users\harsh\Downloads\startup-crm-lite\src\components\common\EmptyState.jsx
+  12:8  error  'React' is defined but never used                        no-unused-vars
+  26:3  error  'filteredLeadsCount' is assigned a value but never used  no-unused-vars
+
+C:\Users\harsh\Downloads\startup-crm-lite\src\components\common\FilterBar.jsx
+  10:8   error  'React' is defined but never used                                                                                               no-unused-vars
+  89:10  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\harsh\Downloads\startup-crm-lite\src\components\common\Header.jsx
+  1:8  error  'React' is defined but never used  no-unused-vars
+
+C:\Users\harsh\Downloads\startup-crm-lite\src\components\common\SearchBar.jsx
+  10:8  error  'React' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           no-unused-vars
+  27:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  25 |   // Sync local state if value prop changes externally (e.g. from a clear-filters button)
+  26 |   useEffect(() => {
+> 27 |     setLocalValue(value);
+     |     ^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  28 |   }, [value]);
+  29 |
+  30 |   // Clean up any active timers on unmount  react-hooks/set-state-in-effect
+
+C:\Users\harsh\Downloads\startup-crm-lite\src\components\dashboard\PipelineOverview.jsx
+  16:8  error  'React' is defined but never used  no-unused-vars
+
+C:\Users\harsh\Downloads\startup-crm-lite\src\components\dashboard\QuickActions.jsx
+  17:8  error  'React' is defined but never used  no-unused-vars
+
+C:\Users\harsh\Downloads\startup-crm-lite\src\components\dashboard\RecentLeads.jsx
+  20:8  error  'React' is defined but never used  no-unused-vars
+
+C:\Users\harsh\Downloads\startup-crm-lite\src\components\dashboard\StatsCard.jsx
+  15:8  error  'React' is defined but never used               no-unused-vars
+  97:9  error  'isNeutral' is assigned a value but never used  no-unused-vars
+
+C:\Users\harsh\Downloads\startup-crm-lite\src\components\leads\LeadCard.jsx
+  11:8  error  'React' is defined but never used  no-unused-vars
+
+C:\Users\harsh\Downloads\startup-crm-lite\src\components\leads\LeadDrawer.jsx
+  64:7  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  62 |   useEffect(() => {
+  63 |     if (lead) {
+> 64 |       setFormData(buildFormData(lead));
+     |       ^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  65 |       setPendingDelete(false);
+  66 |     }
+  67 |   }, [lead]);  react-hooks/set-state-in-effect
+
+C:\Users\harsh\Downloads\startup-crm-lite\src\components\leads\LeadForm.jsx
+  10:8  error  'React' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  no-unused-vars
+  49:7  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  47 |   useEffect(() => {
+  48 |     if (initialData) {
+> 49 |       setFormData({
+     |       ^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  50 |         name: initialData.name || '',
+  51 |         company: initialData.company || '',
+  52 |         email: initialData.email || '',  react-hooks/set-state-in-effect
+
+C:\Users\harsh\Downloads\startup-crm-lite\src\components\leads\LeadTable.jsx
+   48:21  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  46 |
+  47 |   // Reset pending state if the lead changes (e.g., after filtering)
+> 48 |   useEffect(() => { setPendingDelete(false); }, [lead.id]);
+     |                     ^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  49 |
+  50 |   if (pendingDelete) {
+  51 |     return (  react-hooks/set-state-in-effect
+  130:7   error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  128 |   useEffect(() => {
+  129 |     if (totalPages > 0 && currentPage > totalPages) {
+> 130 |       setCurrentPage(totalPages);
+      |       ^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  131 |     }
+  132 |   }, [totalPages, currentPage]);
+  133 |                             react-hooks/set-state-in-effect
+
+C:\Users\harsh\Downloads\startup-crm-lite\src\components\leads\StatusBadge.jsx
+  10:8  error  'React' is defined but never used  no-unused-vars
+
+C:\Users\harsh\Downloads\startup-crm-lite\src\context\NotificationContext.jsx
+  171:17  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\harsh\Downloads\startup-crm-lite\src\pages\Dashboard.jsx
+  21:8   error  'React' is defined but never used        no-unused-vars
+  21:27  error  'useCallback' is defined but never used  no-unused-vars
+
+C:\Users\harsh\Downloads\startup-crm-lite\src\pages\Leads.jsx
+  11:8   error  'React' is defined but never used   no-unused-vars
+  13:16  error  'Table2' is defined but never used  no-unused-vars
+
+C:\Users\harsh\Downloads\startup-crm-lite\src\pages\NotFound.jsx
+  5:8  error  'React' is defined but never used  no-unused-vars
+
+C:\Users\harsh\Downloads\startup-crm-lite\src\routes\index.jsx
+  6:8  error  'React' is defined but never used  no-unused-vars
+
+Γ£û 27 problems (27 errors, 0 warnings)
+
+
